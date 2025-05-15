@@ -41,7 +41,7 @@ net.setPreferableBackend(cv2.dnn.DNN_BACKEND_OPENCV)  # Use OpenCV backend for b
 net.setPreferableTarget(cv2.dnn.DNN_TARGET_CPU)  # Can change to DNN_TARGET_CUDA if GPU available
 
 layer_names = net.getLayerNames()
-output_layers = [layer_names[i - 1] for i in net.getUnconnectedOutLayers()]
+output_layers = [layer_names[i - 1] for i in net.UnconnectedOutLayers()]
 with open(COCO_NAMES_PATH, "r") as f:
     classes = [line.strip() for line in f.readlines()]
 
